@@ -502,7 +502,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   if (!container || !EXTRA) return;
 
   container.innerHTML = EXTRA.map((e) => `
-    <div class="extra-item">
+    <div class="extra-item${e.featured ? ' extra-item--featured' : ''}">
+      ${e.featured ? '<span class="extra-featured-badge">★ Featured</span>' : ''}
       <div class="extra-title">${e.title}</div>
       <div class="extra-period">${e.period}${e.where ? ' · ' + e.where : ''}</div>
       <div class="extra-desc">${e.desc}</div>

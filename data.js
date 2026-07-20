@@ -113,6 +113,7 @@ const EXTRA = [
     title: 'GCI World 2026 — Tokyo University',
     period: 'Apr 2026 – Jul 2026',
     desc: 'Completed an international academic programme in Machine Learning, AI & Data Science in Business.',
+    featured: true,
   },
   {
     title: 'Web Development Mentor',

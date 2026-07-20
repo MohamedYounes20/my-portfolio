@@ -748,6 +748,48 @@ strong { font-weight: 600; }
   line-height: 1.6;
 }
 
+/* Featured extra item highlight */
+.extra-item--featured {
+  position: relative;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(99, 51, 220, 0.06));
+  border-color: rgba(139, 92, 246, 0.45);
+  box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.2), 0 4px 18px rgba(109, 40, 217, 0.15);
+  overflow: hidden;
+}
+
+.extra-item--featured::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(167, 139, 250, 0.07), transparent);
+  background-size: 200% 100%;
+  animation: featured-shimmer 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes featured-shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+.extra-item--featured .extra-title {
+  color: var(--accent);
+}
+
+.extra-featured-badge {
+  display: inline-block;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(139, 92, 246, 0.15);
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  border-radius: 20px;
+  padding: 0.15rem 0.55rem;
+  margin-bottom: 0.45rem;
+}
+
 /* ── 11. Experience Timeline ─────────────────── */
 .timeline {
   position: relative;
